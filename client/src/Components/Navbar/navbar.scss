@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .navbar__container{
+        height: 60px;
+    width: 80%;
+    background-color: #F5C330;
+    border-radius: 30px;
+    padding-left: 20px ;
+    margin-top: 20px;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    .title{
+        color: white;
+        font-size: 40px;
+        font-weight: 500;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .note__icon{
+        .icon{
+            color: white;
+            font-size: 45px;
+        
+        }
+    }
+    }
+    }

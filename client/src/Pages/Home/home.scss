@@ -1,0 +1,15 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(245, 240, 240);
+    .bottom__container{
+        display: flex;
+        flex-direction: row;
+        margin-top: 35px;
+        margin-left: 53px;
+
+    }
+}
+
