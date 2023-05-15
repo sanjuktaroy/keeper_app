@@ -14,6 +14,11 @@ export default function Home() {
     <Sidebar/>
     <Container/>
     </div>
+    {/* <div className="button__container">
+        <div className="add__button">
+            <AddIcon className="icon"/>
+        </div>
+    </div> */}
     </div>
     );
 }
