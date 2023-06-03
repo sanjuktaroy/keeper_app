@@ -1,11 +1,40 @@
 .container {
     height: 50vh;
     flex: 7;
+    position: relative;
     .container__container{
         height: 10px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 15px;
+    }
+    .add__button{
+        position: absolute;
+        right: 15%;
+        top: 60vh;
+        cursor: pointer;
+            &:hover{
+                scale: 0.90;
+                transition: 0.3;
+                background-color: #f8c11b;
+            }
+            &:not(:hover) {
+                transition: 0.3 ;
+            }           
+            // position:absolute;
+            // right: 200px;
+            // top: -100px;
+            height:30px;
+            width: 30px;
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            background-color:#F5C330;
+            border-radius:50%; //rounding box to circle
+            padding: 5px;
+            .icon{
+                color: white;
+            }
     }
 }

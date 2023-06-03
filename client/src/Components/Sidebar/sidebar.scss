@@ -8,18 +8,20 @@
     margin-left: 45px;
     .sidebar__container{
         height: 65vh;
-        width: 18vw;
+        width: 17vw;
         background-color: #F5C330;
         border-radius: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 30px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         .title__text{
             color: white;
-            font-weight: 500;
-            font-size: 30px;
-            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 2.2vw;
+            font-family: 'Open Sans', sans-serif;
+            padding-top: 15px;
         }
         .button__container{
             display: flex;
@@ -27,16 +29,27 @@
             align-items: center;
             gap: 10px;
             .button{
+                display: flex;
                 background-color: white;
-                width: 200px;
+                width: 11vw;
+                justify-content: center;
                 padding-top: 10px;
                 padding-bottom: 10px;
                 color: black;
-                border-radius: 20px;
+                border-radius: 15px;
                 text-align: center;
                 font-weight: 500;
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'Open Sans', sans-serif;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
                 cursor: pointer;
+                &:hover{
+                    scale:0.95;
+                    transition: 0.3s;
+                    background-color: rgb(247, 243, 243);
+                }
+                &:not(:hover){
+                    transition: 0.3s;
+                }
             }
         }
 

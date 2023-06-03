@@ -28,11 +28,11 @@ export default function Container() {
     postData.map((item) => <Note data={item} key={item.id} />)}
     {isAdd && <New />}
     </div>
-    <div className="button__container">
+    
         <div className="add__button" onClick={() => setIsAdd(!isAdd)}>
             <AddIcon className="icon"/>
         </div>
     </div>
-    </div>
+    
   )
 }

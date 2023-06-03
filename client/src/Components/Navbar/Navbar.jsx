@@ -6,9 +6,9 @@ export default function Navbar() {
   return (
     <div className="navbar">
     <div className='navbar__container'>
-    <div className='note__icon'>
+    {/* <div className='note__icon'>
       <DescriptionIcon className='icon'/>
-    </div>
+    </div> */}
     <div className='title'>Keeper</div>
     </div> 
     </div>
