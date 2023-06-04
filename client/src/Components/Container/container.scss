@@ -1,9 +1,10 @@
 .container {
-    height: 50vh;
+    height: fit-content;
     flex: 7;
     position: relative;
     .container__container{
-        height: 10px;
+        min-height: 100vh;
+        height: fit-content;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

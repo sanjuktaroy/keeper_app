@@ -4,21 +4,39 @@ import Note from "../Note/Note"
 import New from "../New/New"
 import axios from 'axios' 
 import AddIcon from '@mui/icons-material/Add';
+import { useLocation } from 'react-router-dom';
 
 export default function Container() {
   const [postData,setPostData] = useState([]);
   const [isAdd, setIsAdd] = useState(false)
+  const location = useLocation();
+  const category = location.pathname.split("/")[2];
+  console.log(category);
+
+  //main route
   const fetchPosts = async () => {
     const posts = await axios.get("http://localhost:3001/getnotes");
     setPostData(posts.data);
+    
     //console.log(posts);
   };
 
-  // fetchPosts();
+  // categories route
+  const fetchPostsByCategory = async () => {
+    const posts = await axios.get("http://localhost:3001/getpostsbycategory/"+category);
+    setPostData(posts.data);
+    
+    //console.log(posts);
+  };
 
   useEffect(() => {
-    fetchPosts();
-  }, []);
+    if(!category) {
+      fetchPosts();
+    }
+    else {
+      fetchPostsByCategory();
+    }
+  }, [category]);
 
   return (
     <div className="container">

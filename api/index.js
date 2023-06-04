@@ -18,16 +18,25 @@ app.use("/",router); //parent route is /
 //     });
 // });
 
+//add category column
+// app.get("/addcolumn", (req, res) => {
+//     const q = "ALTER TABLE sanjukta ADD category varchar(50)";
+//     db.query(q, (err, data) => {
+//       if (err) return res.status(500).json(err);
+//       else return res.status(200).json("Value added successfully!");
+//     });
+//   });
+
 //for adding a note
-app.post("/addnote",(req,res) => {
-    const q = "INSERT INTO sanjukta(`id`,`title`,`description`) VALUES(?);";
-    const val = [req.body.id, req.body.title, req.body.description];
-    console.log(val);
-    db.query(q, [val], (err,data) => {
-        if(err) return res.status(500).json(err);
-        else return res.status(200).json("Value added successfully!");
-    }); 
-});
+// app.post("/addnote",(req,res) => {
+//     const q = "INSERT INTO sanjukta(`id`,`title`,`description`) VALUES(?);";
+//     const val = [req.body.id, req.body.title, req.body.description];
+//     console.log(val);
+//     db.query(q, [val], (err,data) => {
+//         if(err) return res.status(500).json(err);
+//         else return res.status(200).json("Value added successfully!");
+//     }); 
+// });
 
 //getting all the notes
 app.get("/getnotes", (req,res) => {
