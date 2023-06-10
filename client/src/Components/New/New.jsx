@@ -17,7 +17,7 @@ export default function Newe() {
       description: description,
       category: category
     };
-    console.log(value);
+    //console.log(value);
     const res = await axios.post("http://localhost:3001/createpost",value);
     console.log("Value added successfully!");
     window.location.reload(false);
