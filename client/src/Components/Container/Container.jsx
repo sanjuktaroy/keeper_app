@@ -11,7 +11,7 @@ export default function Container() {
   const [isAdd, setIsAdd] = useState(false)
   const location = useLocation();
   const category = location.pathname.split("/")[2];
-  console.log(category);
+  //console.log(category);
 
   //main route
   const fetchPosts = async () => {

@@ -12,8 +12,10 @@ return (
       <div className='title__text'>Categories</div>
       <div className='button__container'>
         {categories.map((item) => (
-          <Link to={"/categories/" + item} className="link">
-            <div className="button"> {item}</div>
+          <Link to={"/categories/" + item} className="link" key={item}>
+            <div className="button"> 
+            {item}
+            </div>
           </Link>
         ))}
       </div>
