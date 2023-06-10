@@ -10,9 +10,10 @@ export default function Note({data}) {
   const [isUpdate, setIsUpdate] = useState(false);
   const [title ,setTitle] = useState("");
   const [desc, setDesc] = useState("");
+const url = "https://keeper-app-3hyr.onrender.com";
 
   const deleteNote = async () => {
-    const res = await axios.get("http://localhost:3001/deletenote/" + data.id);
+    const res = await axios.get(url + "/deletenote/" + data.id);
     console.log("Note deleted successfully!");
     window.location.reload(false);
   };
@@ -25,7 +26,7 @@ export default function Note({data}) {
       title: title,
       description: desc
     };
-    const res = await axios.put("http://localhost:3001/updatepost", value); //for updation use put function
+    const res = await axios.put(url + "/updatepost", value); //for updation use put function
     window.location.reload(false);
   };
 

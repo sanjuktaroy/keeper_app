@@ -9,7 +9,7 @@ export default function Newe() {
   const [title, setTitle] = useState("");
   const [description, setdescription] = useState("");
   const [category, setCategory] = useState("Home");
-
+const url = "https://keeper-app-3hyr.onrender.com";
   const addNote = async () => {
     const value = {
       id: uuidv4(),
@@ -18,7 +18,7 @@ export default function Newe() {
       category: category
     };
     //console.log(value);
-    const res = await axios.post("http://localhost:3001/createpost",value);
+    const res = await axios.post(url + "/createpost",value);
     console.log("Value added successfully!");
     window.location.reload(false);
   };

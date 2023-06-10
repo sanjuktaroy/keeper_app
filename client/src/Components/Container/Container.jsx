@@ -6,6 +6,8 @@ import axios from 'axios'
 import AddIcon from '@mui/icons-material/Add';
 import { useLocation } from 'react-router-dom';
 
+const url = "https://keeper-app-3hyr.onrender.com";
+
 export default function Container() {
   const [postData,setPostData] = useState([]);
   const [isAdd, setIsAdd] = useState(false)
@@ -15,7 +17,7 @@ export default function Container() {
 
   //main route
   const fetchPosts = async () => {
-    const posts = await axios.get("http://localhost:3001/getnotes");
+    const posts = await axios.get(url +"/getnotes");
     setPostData(posts.data);
     
     //console.log(posts);
@@ -23,7 +25,7 @@ export default function Container() {
 
   // categories route
   const fetchPostsByCategory = async () => {
-    const posts = await axios.get("http://localhost:3001/getpostsbycategory/"+category);
+    const posts = await axios.get(url + "/category/"+category);
     setPostData(posts.data);
     
     //console.log(posts);
