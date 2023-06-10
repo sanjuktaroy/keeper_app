@@ -25,7 +25,7 @@ export default function Container() {
 
   // categories route
   const fetchPostsByCategory = async () => {
-    const posts = await axios.get(url + "/category/"+category);
+    const posts = await axios.get(url + "/getpostsbycategory/"+category);
     setPostData(posts.data);
     
     //console.log(posts);
